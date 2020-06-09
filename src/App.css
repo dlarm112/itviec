@@ -1,0 +1,31 @@
+.jobBlock{
+  background-color: #fff1e1;
+  transition-duration: .3s;
+  min-width: 300px;
+  padding: 20px;
+  margin: 10px;
+  width: 100%;
+}
+.jobBlock:hover{
+  background-color: white;
+  transition-duration: .3s;
+  cursor: pointer; 
+}
+
+a .blackLink{
+  color: black!important;
+}
+a .blackLink:hover{
+  color: black!important;
+  text-decoration: none;
+}
+
+.center {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.detailContainer{
+  width: 100%;
+  text-align: center;
+}
