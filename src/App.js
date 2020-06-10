@@ -6,15 +6,21 @@ import Jobs from './page/Jobs';
 import Login from './page/Login';
 import Details from './page/Details'
 import NavBar from './components/NavBar'
+import { useSelector } from "react-redux";
+
 
 function App() {
 
-  let [user,setUser] = useState(true) 
+  let user = useSelector((state) => state.user);
+
 
   const ProtectedRoute = (props) => {
-    if (user === true) {
+
+    if (user.isAuthenticated) {
+      console.log("pass")
       return <Route {...props} />;
     } else {
+      console.log("protected")
       return <Redirect to="/login" />;
     }
   };
