@@ -18,7 +18,7 @@ export default function Jobs(props) {
     let [jobList, setJobList]=useState(null)
     let anchorRef = React.createRef()
     let [originalList, setOriginalList]= useState(null)
-    let history = useHistory
+    let history = useHistory()
     let tempArray = []
     let query = useQuery();
     const QUERYSTR_PREFIX = "q";

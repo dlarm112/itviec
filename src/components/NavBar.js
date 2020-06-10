@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 
 
-export default function NavBar() {
+export default function NavBar(props) {
     return (
 <div>
 
@@ -34,6 +34,10 @@ export default function NavBar() {
             <Button variant="outline-success">Search</Button>
         </Form>
         </Navbar.Collapse>
+        <Form inline onSubmit = { (e) => props.searchByKeyword(e) }>
+            <FormControl onChange={ (e) => props.setKeyword(e.target.value) } type="text" placeholder="Search" className="mr-sm-2" />
+            <Button variant="outline-success" type="submit">Search</Button>
+        </Form>
         </div>
     </Navbar>
 </div>
