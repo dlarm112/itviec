@@ -30,7 +30,7 @@ export default function Jobs(props) {
 
 
     const loadJobs = async () =>{
-        let url = `${REACT_APP_BACKEND_SERVER_URL}/jobs/`
+        let url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/jobs/`
         let data = await fetch(url)
         let result = await data.json(data)
         setOriginalList(result)

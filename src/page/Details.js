@@ -12,7 +12,7 @@ export default function Details() {
 
 
     const getDetailData = async () =>{
-        let url = `${REACT_APP_BACKEND_SERVER_URL}/jobs/${id}`
+        let url = `${process.env.REACT_APP_BACKEND_SERVER_URL}/jobs/${id}`
         let data = await fetch(url)
         let result = await data.json(data)
         console.log(result,"result hrrr")
